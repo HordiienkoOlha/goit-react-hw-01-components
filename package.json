@@ -9,7 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "husky": {
       "hooks": {
-        "pre-commit": "lint-staged"
+        "pre-commit": "npx lint-staged"
       }
     },
     "lint-staged": {
