@@ -1,1 +1,1 @@
-'husky': { 'hooks': { 'pre-commit': 'npx lint-staged' } }
+{ "hooks": { "pre-commit": "npx lint-staged" } }
