@@ -1,10 +1,10 @@
-import Statistics from 'components/Statistics/Statistics';
 import PropTypes from 'prop-types';
+import Statistics from 'components/Statistics/Statistics';
 
-function StatisticsList({ stats }) {
+function StatisticsList({ stats, title }) {
   return (
     <section>
-      <h2 className="title">Upload stats</h2>;
+      {title && <h2>{title}</h2>}
       <ul>
         {stats.map(stat => (
           <li key={stat.id}>
@@ -17,11 +17,13 @@ function StatisticsList({ stats }) {
 }
 
 StatisticsList.propTypes = {
-  items: PropTypes.arrayOf(
+  stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
+      label: PropTypes.string,
+      percentage: PropTypes.number.isRequired,
     })
-  ),
+  ).isRequired,
 };
 
 export default StatisticsList;
