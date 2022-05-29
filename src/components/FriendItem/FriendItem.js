@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+// import styles from 'components/FriendItem/FriendItem.module.css';
 
 const FriendItem = ({ avatar, name, isOnline }) => {
   return (

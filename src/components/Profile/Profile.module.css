@@ -1,0 +1,33 @@
+.profile {
+  text-align: center;
+  margin: 0 auto;
+  border: 2px solid gray;
+  max-width: 500px;
+  box-shadow: 0px 1px 3px rgb(0 0 0 / 12%),
+    0px 1px 1px rgb(0 0 0 / 14%),
+    0px 2px 1px rgb(0 0 0 / 20%);
+}
+.name {
+    font-size: 20px;
+    font-weight: 600;
+}
+.stats {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-around;
+  background-color: azure;
+  border-top: 1px solid gray;
+
+}
+.statsItem {
+  display: flex;
+  flex-basis: calc((100% - 30px) / 3);
+  flex-direction: column;
+  
+
+}
+.quantity {
+    padding-top: 15px;
+    font-weight: 600;
+}
