@@ -1,20 +1,20 @@
 import PropTypes from 'prop-types';
 import TransactionItem from 'components/TransactionItem/TransactionItem';
 import Container from 'components/Container/Container';
-// import styles from 'components/TransactionHistory/TransactionHistory.module.css'
+import styles from 'components/TransactionHistory/TransactionHistory.module.css';
 
 const TransactionHistory = ({ items }) => {
   return (
     <Container>
-      <table className="transaction-history">
-        <thead>
-          <tr>
-            <th>Type</th>
-            <th>Amount</th>
-            <th>Currency</th>
+      <table className={styles.transactionHistory}>
+        <thead className={styles.thead}>
+          <tr className={styles.tr}>
+            <th className={styles.th}>Type</th>
+            <th className={styles.th}>Amount</th>
+            <th className={styles.th}>Currency</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className={styles.tbody}>
           {items.map(item => (
             <TransactionItem
               key={item.id}

@@ -1,0 +1,14 @@
+.td {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px 20px;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+            border: 3px solid #bed8d4;
+            text-shadow: 1px 1px 1px gray;
+}
+.tbody .tr:nth-child(odd) {
+    background-color: #78d5d7;
+}
+
+.tbody .tr:nth-child(even) {
+    background-color: #bed8d4;
+}
