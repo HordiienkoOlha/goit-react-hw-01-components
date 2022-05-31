@@ -14,3 +14,12 @@
 .name {
         padding-left: 15px;
 }
+.red {
+    composes: status;
+    background-color: red;
+}
+
+.green {
+    composes: status;
+    background-color: green;
+}

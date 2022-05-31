@@ -2,7 +2,15 @@ import PropTypes from 'prop-types';
 import styles from 'components/Profile/Profile.module.css';
 import Container from 'components/Container/Container';
 
-const Profile = ({ username, tag, location, avatar, stats }) => {
+const Profile = ({
+  username,
+  tag,
+  location,
+  avatar,
+  followers,
+  views,
+  likes,
+}) => {
   return (
     <Container>
       <div className={styles.profile}>
@@ -15,15 +23,15 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
         <ul className={styles.stats}>
           <li className={styles.statsItem}>
             <span className="label">Followers</span>
-            <span className={styles.quantity}>{stats.followers}</span>
+            <span className={styles.quantity}>{followers}</span>
           </li>
           <li className={styles.statsItem}>
             <span className="label">Views</span>
-            <span className={styles.quantity}>{stats.views}</span>
+            <span className={styles.quantity}>{views}</span>
           </li>
           <li className={styles.statsItem}>
             <span className="label">Likes</span>
-            <span className={styles.quantity}>{stats.likes}</span>
+            <span className={styles.quantity}>{likes}</span>
           </li>
         </ul>
       </div>
@@ -37,6 +45,9 @@ Profile.propTypes = {
   location: PropTypes.string.isRequired,
   avatar: PropTypes.node.isRequired,
   stats: PropTypes.object.isRequired,
+  followers: PropTypes.number.isRequired,
+  views: PropTypes.number.isRequired,
+  likes: PropTypes.number.isRequired,
 };
 
 export default Profile;

@@ -2,15 +2,11 @@ import PropTypes from 'prop-types';
 import styles from 'components/FriendItem/FriendItem.module.css';
 
 const FriendItem = ({ avatar, name, isOnline }) => {
+  const statusClass = isOnline ? styles.green : styles.red;
   return (
     <>
       <div className={styles.round}>
-        <span
-          className={styles.status}
-          style={{ backgroundColor: isOnline ? 'green' : 'red' }}
-        >
-          {isOnline}
-        </span>
+        <span className={statusClass}>{isOnline}</span>
       </div>
       <img
         className={styles.avatar}
@@ -30,3 +26,6 @@ FriendItem.propTypes = {
 };
 
 export default FriendItem;
+// {
+//   `${isOnline ? 'green' : 'red'}`;
+// }
